@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses">
+  <DataContextMoniker Name="/DataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="36047e78-1979-4d92-9a94-a460bf722b40" absoluteBounds="1.25, 1.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClassesDataContext/Guides" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23fca9ab-e099-47b9-bf25-fa16d37edfe7" absoluteBounds="1.2650000000000001, 1.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7ddd8e7d-cd7b-4e2b-afb0-d714df3d3add" absoluteBounds="1.25, 1, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DataClassesDataContext/Knots" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9fddb270-3e68-497b-93a0-e69fb787feb2" absoluteBounds="1.2650000000000001, 1.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.25 : 1.81814697265625); (3.31 : 1.81814697265625); (3.31 : 1.06); (2.25 : 1.06); (2.25 : 1)]" fixedFrom="Algorithm" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesDataContext/Guides/Guides_Knots" />
+      <nodes>
+        <classShapeMoniker Id="36047e78-1979-4d92-9a94-a460bf722b40" />
+        <classShapeMoniker Id="7ddd8e7d-cd7b-4e2b-afb0-d714df3d3add" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="21f28ee3-2983-47e7-98cc-e930ea316d18" absoluteBounds="4.625, 1.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DataClassesDataContext/Types" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3d51bebf-7409-435b-9c19-7507596c05f0" absoluteBounds="4.64, 2.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.625 : 2.44356974283854); (3.25 : 2.44356974283854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/Types/Types_Knots" />
+      <nodes>
+        <classShapeMoniker Id="21f28ee3-2983-47e7-98cc-e930ea316d18" />
+        <classShapeMoniker Id="7ddd8e7d-cd7b-4e2b-afb0-d714df3d3add" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

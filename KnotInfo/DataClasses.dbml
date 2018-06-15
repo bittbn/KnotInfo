@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="KnotData" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-A4B68L9\SQLEXPRESS;Initial Catalog=KnotData;Integrated Security=True" SettingsObjectName="KnotInfo.Properties.Settings" SettingsPropertyName="KnotConnection" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Guides" Member="Guides">
+    <Type Name="Guides">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="comment" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="image" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Guides_Knots" Member="Knots" ThisKey="id" OtherKey="guide_id" Type="Knots" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Knots" Member="Knots">
+    <Type Name="Knots">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="image" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="comment" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="type_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="guide_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Guides_Knots" Member="Guides" ThisKey="guide_id" OtherKey="id" Type="Guides" IsForeignKey="true" />
+      <Association Name="Types_Knots" Member="Types" ThisKey="type_id" OtherKey="id" Type="Types" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Types" Member="Types">
+    <Type Name="Types">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Association Name="Types_Knots" Member="Knots" ThisKey="id" OtherKey="type_id" Type="Knots" />
+    </Type>
+  </Table>
+</Database>
